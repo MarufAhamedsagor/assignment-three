@@ -7,14 +7,29 @@ function kilometerToMeter(distance){
     return  displacement ;
    
 }
+let kilometer = 7;
+if ( kilometer >= 0) {
+   let answer = kilometerToMeter(kilometer);
+   console.log(answer);   
+}
 
 
 
 // Determinate the budgetCalculator 
 
 function budgetCalculator(watch, phone, laptop){
-sumMoney = (watch * 50) + (phone * 100) + (laptop * 500);
-return sumMoney;
+ firstPart = watch * 50;
+ secondPart = phone * 100;
+ thirdPart = laptop * 500;
+ sumMoney = firstPart + secondPart + thirdPart;
+ return sumMoney;
+}
+let watch = 4;
+phone  = 3;
+laptop = 2;
+if ( watch >= 0 && phone >= 0 && laptop >=0 ) {
+  let sum = budgetCalculator(watch , phone, laptop);
+  console.log(sum);
 }
 
 
@@ -43,20 +58,25 @@ function hotelCost(days){
   return totalCost;
 }
 
+let amountTotal = hotelCost(24);
+
+console.log(amountTotal);
+
 // find the largest name from an array 
 
-
-
 function megaFriend(arr){
-var long = arr[0];
-for (let i = 0; i < arr.length; i++) {
- const element = arr[i];
-     if( long.length < element.length){
-         long = element
-         }
-              }
-             return long
-                 }
+          let longest = arr[0].length;
+            let ans = arr[0];
+          for (let i = 0; i < arr.length; i++) {
+            let element = arr[i].length;
+
+            if ( element > longest) {
+                ans = arr[i];
+                longest = element;
+            }
+          }
+          return ans;
+    }
                  
         // let declare an array 
                  let  friend = [
@@ -68,4 +88,6 @@ for (let i = 0; i < arr.length; i++) {
                    'Mst Nishat Anjum',
                    'Mst Morium Begum'
                  ];
+                 let result = megaFriend(friend);
+                 console.log(result);
 
