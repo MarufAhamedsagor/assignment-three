@@ -58,14 +58,14 @@ function hotelCost(days){
   return totalCost;
 }
 
-let amountTotal = hotelCost(24);
+let totalAmount = hotelCost(24);
 
-console.log(amountTotal);
+console.log(totalAmount);
 
 // find the largest name from an array 
 
 function megaFriend(friendsName){
-  
+
           let longest = friendsName[0].length;
             let ans = friendsName[0];
           for (let i = 0; i < friendsName.length; i++) {
