@@ -8,7 +8,7 @@ function kilometerToMeter(kiloMeter){
    
 }
 let kilometer = 7;
-if ( kilometer >= 0) {
+if ( kilometer >= 0 && kilometer !== "string") {
    let answer = kilometerToMeter(kilometer);
    console.log(answer);   
 }
