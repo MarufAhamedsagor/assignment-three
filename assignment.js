@@ -58,22 +58,27 @@ function hotelCost(days){
   return totalCost;
 }
 
-let totalAmount = hotelCost(24);
-
-console.log(totalAmount);
+let numberOfDay = 25;
+if (numberOfDay < 0) {
+      console.log("please enter positive number")
+}
+else{
+  let totalAmount = hotelCost(numberOfDay);
+  console.log(totalAmount);
+}
 
 // find the largest name from an array 
 
 function megaFriend(friendsName){
 
-          let longest = friendsName[0].length;
+          let longestName = friendsName[0].length;
             let ans = friendsName[0];
           for (let i = 0; i < friendsName.length; i++) {
-            let element = friendsName[i].length;
+            let elementName = friendsName[i].length;
 
-            if ( element > longest) {
+            if ( elementName > longestName) {
                 ans = friendsName[i];
-                longest = element;
+                longestName = elementName;
             }
           }
           return ans;
