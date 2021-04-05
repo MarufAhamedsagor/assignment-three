@@ -2,9 +2,9 @@
 
 
 // converting to kilometer to meter
-function kilometerToMeter(distance){
-    displacement = distance * 1000;
-    return  displacement ;
+function kilometerToMeter(kiloMeter){
+    meter = kiloMeter * 1000;
+    return  meter;
    
 }
 let kilometer = 7;
@@ -18,11 +18,11 @@ if ( kilometer >= 0) {
 // Determinate the budgetCalculator 
 
 function budgetCalculator(watch, phone, laptop){
- firstPart = watch * 50;
- secondPart = phone * 100;
- thirdPart = laptop * 500;
- sumMoney = firstPart + secondPart + thirdPart;
- return sumMoney;
+ watchCost = watch * 50;
+ phoneCost = phone * 100;
+ laptopCost = laptop * 500;
+ totalBil = watchCost + phoneCost + laptopCost;
+ return totalBil;
 }
 let watch = 4;
 phone  = 3;
@@ -36,25 +36,25 @@ if ( watch >= 0 && phone >= 0 && laptop >=0 ) {
 //Determine the cost of how long I have been in the hotel
 
 function hotelCost(days){
- cost = 0;
+ totalCost = 0;
  if (days <= 10){
-   cost = days * 100;
+   totalCost = days * 100;
  }
  else if (days <= 20){
-    firstCost = 10 * 100;
+    first10Cost = 10 * 100;
     dayRemain = days - 10;
-    secondCost = dayRemain * 80;
-    cost = firstCost + secondCost;
+    second10Cost = dayRemain * 80;
+    totalCost = first10Cost + second10Cost;
 
  }
  else {
-   firstCost = 10 * 100;
-   secondCost = 10 * 80;
+   first10Cost = 10 * 100;
+   second10Cost = 10 * 80;
    dayRemain = days - 20;
    thirdCost = dayRemain * 50;
    
  }
-  totalCost = firstCost + secondCost + thirdCost;
+  totalCost = first10Cost + second10Cost + thirdCost;
   return totalCost;
 }
 
@@ -64,14 +64,15 @@ console.log(amountTotal);
 
 // find the largest name from an array 
 
-function megaFriend(arr){
-          let longest = arr[0].length;
-            let ans = arr[0];
-          for (let i = 0; i < arr.length; i++) {
-            let element = arr[i].length;
+function megaFriend(friendsName){
+  
+          let longest = friendsName[0].length;
+            let ans = friendsName[0];
+          for (let i = 0; i < friendsName.length; i++) {
+            let element = friendsName[i].length;
 
             if ( element > longest) {
-                ans = arr[i];
+                ans = friendsName[i];
                 longest = element;
             }
           }
@@ -79,7 +80,7 @@ function megaFriend(arr){
     }
                  
         // let declare an array 
-                 let  friend = [
+                 let  friends = [
                    'MD Shanto Islam',
                    'Md Shariful Islam',
                    'Maruf Ahamed Sagor',
@@ -88,6 +89,6 @@ function megaFriend(arr){
                    'Mst Nishat Anjum',
                    'Mst Morium Begum'
                  ];
-                 let result = megaFriend(friend);
+                 let result = megaFriend(friends);
                  console.log(result);
 
